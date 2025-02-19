@@ -1,0 +1,15 @@
+- name: Install and Start NGINX
+  hosts: devendra
+  become: yes
+  tasks:
+    - name: Install NGINX
+      ansible.builtin.yum:
+        name: nginx
+        state: present
+
+    - name: Start and enable NGINX service
+      ansible.builtin.service:
+        name: nginx
+        state: started
+        enabled: yes
+

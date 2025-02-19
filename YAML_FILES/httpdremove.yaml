@@ -1,0 +1,8 @@
+- name: removing httpd
+  hosts: devendra
+  become: yes
+  tasks:
+    - name: removing httpd
+      ansible.builtin.yum:
+        name: httpd
+        state: absent

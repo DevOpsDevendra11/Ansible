@@ -1,0 +1,10 @@
+- name: giving variables in ansible
+  hosts: localhost,devendra
+  vars:
+    COURSE: Devops
+    LEARNER: Devendra
+  tasks: 
+    - name: Giving Varaibles in ansible
+      ansible.builtin.debug:
+        msg: Iam {{LEARNER}} and Iam Learning my Dream Course {{COURSE}}
+    

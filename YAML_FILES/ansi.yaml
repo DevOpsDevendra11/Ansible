@@ -1,0 +1,12 @@
+- name: Installing nginx
+  hosts: devendra
+  become: yes
+  vars:
+    ansible_user: "{{ ans_user }}"
+    ansible_ssh_pass: "{{ ansible_password }}"
+  tasks:
+    - name: Ensure nginx is installed
+      ansible.builtin.yum:
+        name: nginx
+        state: present
+
