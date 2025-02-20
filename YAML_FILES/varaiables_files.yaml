@@ -1,0 +1,9 @@
+- name: variables from files
+  hosts: localhost
+  become: yes
+  vars_files:
+  - vars.yaml
+  tasks:
+  - name: taking variables from files
+    ansible.builtin.debug:
+      msg: "Iam {{NAME}} and Iam learning {{COURSE}} course with the help of {{TRAINER}}"
