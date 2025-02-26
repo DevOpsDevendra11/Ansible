@@ -1,8 +1,10 @@
 - name: giving variables in ansible
   hosts: localhost,devendra
   vars:
+    NAME: Devendra
     COURSE: Devops
     LEARNER: Devendra
+    TRAINER: Siva Kumar
   tasks: 
     - name: Giving Varaibles in ansible
       ansible.builtin.debug:
