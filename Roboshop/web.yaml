@@ -1,0 +1,13 @@
+- name: installing of web server
+  hosts: localhost
+  tasks:
+  - name: installing of webserver
+    ansible.builtin.yum:
+      name: nginx
+      state: present
+  - name: starting the service
+    ansible.builtin.service:
+      name: nginx
+      state: started
+      enabled: yes
+  
